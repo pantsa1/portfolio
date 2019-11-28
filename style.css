@@ -1,3 +1,8 @@
+body{
+    background-image: url("aku2.gif");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 h1 {
     color: red;
 }
