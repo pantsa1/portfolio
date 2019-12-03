@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Numeron Arvaus Peli</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+
+    <div class="container">
+        <div class="box1">
+
+            <h1>Arvaa numero</h1>
+
+            <p>Valitsimme randomin numeron 1-10 väliltä. Katsotaan arvaatko sen?</p>
+
+            <div class="form"> 
+                <label for="guessField">Vastauksesi: </label>
+                <input type="text" id="guessField" class="guessField">
+                <input type="submit" value="Lähetä vastaus" class="guessSubmit" id="submitguess">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        // random value generated 
+        var y = Math.floor(Math.random() * 10 + 1);
+
+        // counting the number of guesses 
+        // made for correct Guess 
+        var guess = 1;
+
+        document.getElementById("submitguess").onclick = function () {
+
+            // number guessed by user      
+            var x = document.getElementById("guessField").value;
+
+            if (x == y) {
+                alert("VERY NICE! Oikein meni "
+                    + guess + " yrityksellä ");
+            }
+            else if (x > y) /* if guessed number is greater 
+                                           than actual number*/ {
+                guess++;
+                alert("LUUSERI!! Pienempää numeroa.");
+            }
+            else {
+                guess++;
+                alert("LUUSERI!! Isompaa numeroa.")
+            }
+        } 
+    </script>
+</body>
+
+</html>
