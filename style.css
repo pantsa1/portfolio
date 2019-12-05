@@ -23,8 +23,11 @@ p {
 }
 
 .box1{
-    background-color: darkblue;
+    background-color: darkturquoise;
     color: white;
 
-    border: 5px yellow solid;
+    border: 5px blue solid;
+    margin-left: 400px;
+    margin-top: 120px;
+    text-align: center;
 }
